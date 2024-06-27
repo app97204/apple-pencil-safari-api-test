@@ -93,7 +93,9 @@ for (const ev of ['touchmove', 'mousemove']) {
   canvas.addEventListener(ev, function (e) {
     if (!isMousedown) return
     e.preventDefault()
-    if(touch.touchType === 'direct') return e.preventDefault()
+
+    // const touch = e.touches ? e.touches[0] : null
+    // if(touch.touchType !== 'direct') return e.preventDefault()
 
     let pressure = 0.1
     let x, y
